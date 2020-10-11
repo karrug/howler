@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from common import views as common_views
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path("room", common_views.get_room, name="get_room"),
+    path("set-message", common_views.set_message, name="set_message"),
+    path("get-message", common_views.get_message, name="get_message"),
 ]

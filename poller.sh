@@ -4,7 +4,7 @@
 old=""
 while true
 do
-  new="$(curl http://m.karrug.com/g)"
+  new="$(curl -s https://m.karrug.com/g)"
   if [ "$new" != "$old" ]
   then
     notify-send "$new"

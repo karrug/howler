@@ -10,5 +10,5 @@ do
     notify-send "$new"
     old="$new"
   fi
-  sleep 5
+  sleep 1
 done
